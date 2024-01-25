@@ -36,6 +36,12 @@ function list_users_with_read_access {
     fi
 }
 
+function helper{
+	exp_cmd_argu=2
+	if [ $# -ne $exp_cmd_argu]; then
+		echo " please execute the cmd with crrt arguments like Repo owner and repo file"
+}
+
 # Main script
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
