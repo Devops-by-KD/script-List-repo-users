@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Github api url
-Git_url= "https://api.github.com"
+API_URL== "https://api.github.com"
 
 # we are taking github username and token
 USERNAME=$username
@@ -14,7 +14,7 @@ REPO_NAME=$2
 # Function to get Git request to the Gitapi
 function github_api_get{
 	local endpoint="$1"
-	local url ="${Git_url}/${endpoint}"
+	local url ="${API_URL}/${endpoint}"
 	
 	# send git request to the Github api authentication
 	curl -s -u "${USERNAME}:${TOKEN}" "$url"
